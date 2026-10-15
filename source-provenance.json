@@ -8,8 +8,8 @@
   "files": [
     {
       "path": "dist/acp-telemetry.html",
-      "original_sha256": "98c9b84fde14494618252518b3c1fe8067ca1c17318b65378933c700b5619d7b",
-      "imported_sha256": "98c9b84fde14494618252518b3c1fe8067ca1c17318b65378933c700b5619d7b",
+      "original_sha256": "fc204c87ee49fb173916fd087b1a382553350d572de943bf091ca670536843da",
+      "imported_sha256": "fc204c87ee49fb173916fd087b1a382553350d572de943bf091ca670536843da",
       "password_defaults_cleared": 0
     },
     {
@@ -20,32 +20,32 @@
     },
     {
       "path": "dist/live-control.html",
-      "original_sha256": "a46e341e1570882460dab07484e84f3a3277fc6a67643906173728c7bcc3c1fb",
-      "imported_sha256": "a46e341e1570882460dab07484e84f3a3277fc6a67643906173728c7bcc3c1fb",
+      "original_sha256": "2cb94b0b45923d764014e7e7b21abdff2caf45f973907737fb417e38378bcb9c",
+      "imported_sha256": "2cb94b0b45923d764014e7e7b21abdff2caf45f973907737fb417e38378bcb9c",
       "password_defaults_cleared": 0
     },
     {
       "path": "dist/mesh-topology.html",
-      "original_sha256": "e313fa552547961c6a8cf1013e324f1cdea463902cd9f804d53bc90e85f5c23d",
-      "imported_sha256": "e313fa552547961c6a8cf1013e324f1cdea463902cd9f804d53bc90e85f5c23d",
+      "original_sha256": "54990e7c8abfdb042e019893043806f97f42146365f924220038265c41496f64",
+      "imported_sha256": "54990e7c8abfdb042e019893043806f97f42146365f924220038265c41496f64",
       "password_defaults_cleared": 0
     },
     {
       "path": "dist/prototype.css",
-      "original_sha256": "3f13bece0bbe5dce28d768b7ba1a96e496954a7b2e98ad295998a1ac64fd7518",
-      "imported_sha256": "3f13bece0bbe5dce28d768b7ba1a96e496954a7b2e98ad295998a1ac64fd7518",
+      "original_sha256": "a06d112ae5cdcae1146d820a9f26d0ab45c5db9be3951e94a9cfe4db5655fbb1",
+      "imported_sha256": "a06d112ae5cdcae1146d820a9f26d0ab45c5db9be3951e94a9cfe4db5655fbb1",
       "password_defaults_cleared": 0
     },
     {
       "path": "dist/runtime-config-settings.html",
-      "original_sha256": "76da54fdac7a9198e0f99e5d8c30b68dc5dd3dc2eaa22fa17ba25fed011f5af0",
-      "imported_sha256": "d3e9fe82569fda59b7409286f61e01d13d11f3900585d3b6349f03d60019f58d",
+      "original_sha256": "d4eaf36a1a03a513076847ac998fd1748d7eb99b740e0c0026f58c6e9e077e9b",
+      "imported_sha256": "e369d5452600af9cdcd690b460d5319336cc7ff4242efdfddcd1c64b79a83c49",
       "password_defaults_cleared": 2
     },
     {
       "path": "dist/shell.js",
-      "original_sha256": "42b8112a5a8b8888ead20e0ac4cb0eef8080e33244997718ae0381ceb11b6b92",
-      "imported_sha256": "42b8112a5a8b8888ead20e0ac4cb0eef8080e33244997718ae0381ceb11b6b92",
+      "original_sha256": "bdf48772916e959367811c6e976d98fe09af0c024f08d5b01d6c26b6e719d26a",
+      "imported_sha256": "bdf48772916e959367811c6e976d98fe09af0c024f08d5b01d6c26b6e719d26a",
       "password_defaults_cleared": 0
     },
     {
@@ -56,14 +56,14 @@
     },
     {
       "path": "dist/tool-registry.html",
-      "original_sha256": "493f0e9ce98f6a83c00cb06e03545e243248d1ee1778ff4fe098ef2519b82169",
-      "imported_sha256": "493f0e9ce98f6a83c00cb06e03545e243248d1ee1778ff4fe098ef2519b82169",
+      "original_sha256": "a25ed2fc2bf517d2a9f2c83c83fbae4a75b47344ec5c7a61c1d909302ab36ea9",
+      "imported_sha256": "a25ed2fc2bf517d2a9f2c83c83fbae4a75b47344ec5c7a61c1d909302ab36ea9",
       "password_defaults_cleared": 0
     },
     {
       "path": "build.py",
-      "original_sha256": "9fae37e46024bdea5d073e919aa6498427d75d0692ff52a89e1572d0dc4dc98e",
-      "imported_sha256": "9fae37e46024bdea5d073e919aa6498427d75d0692ff52a89e1572d0dc4dc98e",
+      "original_sha256": "8fd771ece5e8a046c11a54e3671697839f656a67aad0afc39f7b06b2aabbc6e8",
+      "imported_sha256": "8fd771ece5e8a046c11a54e3671697839f656a67aad0afc39f7b06b2aabbc6e8",
       "password_defaults_cleared": 0
     }
   ]
