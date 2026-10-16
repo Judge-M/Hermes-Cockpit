@@ -22,7 +22,15 @@ Open http://127.0.0.1:4174. The server binds only to loopback. A static HTTP ser
 node scripts/check.mjs
 ```
 
-The check validates imported-file hashes, the five screens, local asset references, inline JavaScript syntax, and blank password defaults. It is not a Hermes integration test.
+The check validates immutable imported-file hashes, recorded intentional source changes, the five screens, local asset references, inline JavaScript syntax, and blank password defaults. It is not a Hermes integration test.
+
+## Live demo
+
+The static prototype is published from `main` through GitHub Pages:
+
+[Open the Hermes Cockpit demo](https://judge-m.github.io/Hermes-Cockpit/)
+
+The header uses the checked-in [Hermes Aviator Girl asset](dist/assets/hermes-aviator-girl.jpg), so the demo does not depend on the original externally hosted image.
 
 ## Original frontend
 
@@ -33,9 +41,9 @@ The check validates imported-file hashes, the five screens, local asset referenc
 - `dist/runtime-config-settings.html`
 - Shared shell, CSS, JavaScript, and index redirect in `dist/`.
 
-The files were recovered from the owned [original demo](https://hermes-copilot-workbench.artfulperch7.chatgpt.site) at source commit `e52f5d2ac25718b67c5f135c4bfbd50c52fe5206`. `source-provenance.json` records original and imported SHA-256 hashes. All copied files are byte-identical except the two password default values in the settings screen. No layout, CSS, interaction logic, titles, or asset URLs were redesigned or renamed.
+The files were recovered from the owned [original demo](https://hermes-copilot-workbench.artfulperch7.chatgpt.site) at source commit `e52f5d2ac25718b67c5f135c4bfbd50c52fe5206`. `source-provenance.json` records original and imported SHA-256 hashes. All copied files remain byte-identical except the two password default values in the settings screen; the later local-logo change is recorded separately in `source-changes.json`. No layout, CSS, or interaction logic was redesigned.
 
-The original frontend depends on externally hosted Tailwind, Google Fonts, icons, and image URLs. These references are preserved, not vendored, so it is not an offline/self-contained bundle. The copied `build.py` is a historical generator that requires the original uploaded Stitch exports at an environment-specific path; it is not the local build command. Serve the already-generated `dist/` files instead.
+The original frontend depends on externally hosted Tailwind, Google Fonts, and icons. Those references are preserved; the Hermes Aviator Girl header image is now vendored in `dist/assets/` for the GitHub Pages demo. The copied `build.py` is a historical generator that requires the original uploaded Stitch exports at an environment-specific path; it is not the local build command. Serve the already-generated `dist/` files instead.
 
 The existing Site's `.openai/hosting.json` is deliberately excluded so this repository does not accidentally target the original hosted Site. No Site deployment was changed by this import.
 

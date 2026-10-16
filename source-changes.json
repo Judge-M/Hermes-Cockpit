@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "changes": [
+    {
+      "path": "dist/shell.json",
+      "baseline_sha256": "26ce1725b769ec818d89316abd7b39b3b7376b328e60d49c24eeec1b05b6fe95",
+      "reason": "Use the checked-in Hermes Aviator Girl image for GitHub Pages and portable previews.",
+      "verification": "scripts/check.mjs validates this as an explicit intentional source change; all other imported files remain baseline-verified."
+    }
+  ]
+}

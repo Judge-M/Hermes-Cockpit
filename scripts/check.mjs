@@ -8,8 +8,16 @@ import vm from 'node:vm';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = file => readFileSync(path.join(root, file), 'utf8');
 const provenance = JSON.parse(read('source-provenance.json'));
+const sourceChanges = JSON.parse(read('source-changes.json'));
+const intentional = new Map((sourceChanges.changes || []).map(change => [change.path, change]));
 for (const entry of provenance.files) {
   const hash = createHash('sha256').update(readFileSync(path.join(root, entry.path))).digest('hex');
+  const change = intentional.get(entry.path);
+  if (change) {
+    assert.equal(change.baseline_sha256, entry.imported_sha256, `Intentional change baseline mismatch: ${entry.path}`);
+    assert.notEqual(hash, entry.imported_sha256, `Intentional change is not present: ${entry.path}`);
+    continue;
+  }
   assert.equal(hash, entry.imported_sha256, `Imported baseline differs: ${entry.path}`);
 }
 const screens = ['live-control', 'mesh-topology', 'tool-registry', 'acp-telemetry', 'runtime-config-settings'];
@@ -35,6 +43,8 @@ for (const screen of screens) {
 new vm.Script(read('dist/shell.js'), {filename:'shell.js'});
 const shell = JSON.parse(read('dist/shell.json'));
 assert.ok(shell.header.includes('Hermes Cockpit'));
+assert.ok(shell.header.includes('src="assets/hermes-aviator-girl.jpg"'));
+assert.ok(existsSync(path.join(root, 'dist/assets/hermes-aviator-girl.jpg')), 'Missing vendored Hermes Aviator Girl asset');
 for (const screen of screens) assert.ok(shell.aside.includes(`data-path="${screen}"`));
 assert.ok(read('dist/index.html').includes('url=live-control.html'));
-console.log(`PASS: ${provenance.files.length} baseline hashes; ${screens.length} screens; local references; ${inlineScripts} inline scripts and shared shell syntax; blank password defaults.`);
+console.log(`PASS: ${provenance.files.length} baseline hashes; ${intentional.size} intentional source change; ${screens.length} screens; local references; ${inlineScripts} inline scripts and shared shell syntax; vendored cockpit girl asset; blank password defaults.`);
